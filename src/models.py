@@ -60,7 +60,7 @@ class Favourite(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    id_usuario= Column(Integer, ForeignKey('usuario.id'), nullable=True)
+    id_usuario= Column(Integer, ForeignKey('usuario.id'), nullable=False)
     id_person = Column(Integer, ForeignKey('person.id'), nullable=True)
     id_vehicle = Column(Integer, ForeignKey('vehicle.id'), nullable=True)
     id_planet= Column(Integer, ForeignKey('planet.id'), nullable=True)     
